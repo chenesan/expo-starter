@@ -3,7 +3,7 @@ import { StyleSheet, Alert, Platform } from 'react-native';
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import * as Location from 'expo-location';
 import { YStack, XStack, Card, Text, Button, Sheet, ScrollView, Image } from 'tamagui';
-import { MapPin, Star, Phone, Clock } from 'lucide-react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 import { restaurants } from '@/data/restaurants';
 import { Restaurant } from '@/types/restaurant';
 
@@ -54,7 +54,7 @@ export default function MapScreen() {
   const renderRating = (rating: number) => {
     return (
       <XStack alignItems="center" gap="$1">
-        <Star size={16} color="#FFD700" fill="#FFD700" />
+        <MaterialIcons name="star" size={16} color="#FFD700" />
         <Text fontSize="$3" color="$gray11">{rating}</Text>
       </XStack>
     );
@@ -140,7 +140,7 @@ export default function MapScreen() {
 
                 <YStack gap="$3">
                   <XStack alignItems="center" gap="$2">
-                    <MapPin size={16} color="$gray11" />
+                    <MaterialIcons name="location-on" size={16} color="#666" />
                     <Text fontSize="$3" color="$gray11" flex={1}>
                       {selectedRestaurant.address}
                     </Text>
@@ -148,7 +148,7 @@ export default function MapScreen() {
 
                   {selectedRestaurant.phone && (
                     <XStack alignItems="center" gap="$2">
-                      <Phone size={16} color="$gray11" />
+                      <MaterialIcons name="phone" size={16} color="#666" />
                       <Text fontSize="$3" color="$gray11">
                         {selectedRestaurant.phone}
                       </Text>
@@ -156,7 +156,7 @@ export default function MapScreen() {
                   )}
 
                   <XStack alignItems="center" gap="$2">
-                    <Clock size={16} color="$gray11" />
+                    <MaterialIcons name="access-time" size={16} color="#666" />
                     <Text fontSize="$3" color="$gray11">
                       {selectedRestaurant.openHours}
                     </Text>

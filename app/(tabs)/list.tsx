@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FlatList } from 'react-native';
 import { YStack, XStack, Card, Text, Input, Button, Image } from 'tamagui';
-import { Search, Star, MapPin, Phone, Clock, Filter } from 'lucide-react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 import { restaurants } from '@/data/restaurants';
 import { Restaurant } from '@/types/restaurant';
 
@@ -28,7 +28,7 @@ export default function ListScreen() {
   const renderRating = (rating: number) => {
     return (
       <XStack alignItems="center" gap="$1">
-        <Star size={14} color="#FFD700" fill="#FFD700" />
+        <MaterialIcons name="star" size={14} color="#FFD700" />
         <Text fontSize="$2" color="$gray11">{rating}</Text>
       </XStack>
     );
@@ -77,7 +77,7 @@ export default function ListScreen() {
 
         <YStack gap="$2">
           <XStack alignItems="center" gap="$2">
-            <MapPin size={14} color="$gray11" />
+            <MaterialIcons name="location-on" size={14} color="#666" />
             <Text fontSize="$2" color="$gray11" flex={1} numberOfLines={1}>
               {item.address}
             </Text>
@@ -85,7 +85,7 @@ export default function ListScreen() {
 
           {item.phone && (
             <XStack alignItems="center" gap="$2">
-              <Phone size={14} color="$gray11" />
+              <MaterialIcons name="phone" size={14} color="#666" />
               <Text fontSize="$2" color="$gray11">
                 {item.phone}
               </Text>
@@ -93,7 +93,7 @@ export default function ListScreen() {
           )}
 
           <XStack alignItems="center" gap="$2">
-            <Clock size={14} color="$gray11" />
+            <MaterialIcons name="access-time" size={14} color="#666" />
             <Text fontSize="$2" color="$gray11">
               {item.openHours}
             </Text>
@@ -143,16 +143,19 @@ export default function ListScreen() {
               backgroundColor="$gray2"
               borderColor="$gray6"
             />
-            <Search 
+            <MaterialIcons 
+              name="search" 
               size={16} 
-              color="$gray11" 
-              position="absolute" 
-              left="$3" 
-              top="50%" 
-              transform={[{ translateY: -8 }]}
+              color="#666" 
+              style={{
+                position: 'absolute',
+                left: 12,
+                top: '50%',
+                transform: [{ translateY: -8 }]
+              }}
             />
           </YStack>
-        </YStack>
+        </XStack>
 
         {/* Cuisine Filter */}
         <FlatList
