@@ -6,9 +6,11 @@ import 'react-native-reanimated';
 import { TamaguiProvider } from 'tamagui';
 import config from '../tamagui.config';
 
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { useColorScheme } from '@/hooks/useColorScheme'
+import { useFrameworkReady } from '@/hooks/useFrameworkReady';
 
 export default function RootLayout() {
+  useFrameworkReady();
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
