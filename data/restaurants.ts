@@ -1,0 +1,93 @@
+import { Restaurant } from '@/types/restaurant';
+
+export const restaurants: Restaurant[] = [
+  {
+    id: '1',
+    name: '鼎泰豐',
+    cuisine: '台式料理',
+    rating: 4.8,
+    priceRange: '$$',
+    address: '台北市大安區信義路二段194號',
+    phone: '02-2321-8928',
+    image: 'https://images.pexels.com/photos/4871119/pexels-photo-4871119.jpeg?auto=compress&cs=tinysrgb&w=800',
+    latitude: 25.0330,
+    longitude: 121.5654,
+    description: '世界知名的小籠包專門店，以精緻的手工小籠包聞名全球。',
+    openHours: '11:00-21:30',
+    features: ['小籠包', '炒飯', '湯品', '外帶']
+  },
+  {
+    id: '2',
+    name: '阿宗麵線',
+    cuisine: '台式小吃',
+    rating: 4.5,
+    priceRange: '$',
+    address: '台北市萬華區峨嵋街8-1號',
+    phone: '02-2388-8808',
+    image: 'https://images.pexels.com/photos/4871652/pexels-photo-4871652.jpeg?auto=compress&cs=tinysrgb&w=800',
+    latitude: 25.0425,
+    longitude: 121.5067,
+    description: '台北老字號麵線店，濃郁的大腸麵線是招牌必點。',
+    openHours: '10:30-22:30',
+    features: ['大腸麵線', '蚵仔麵線', '小菜', '站食']
+  },
+  {
+    id: '3',
+    name: '欣葉台菜',
+    cuisine: '台菜',
+    rating: 4.6,
+    priceRange: '$$$',
+    address: '台北市中山區雙城街34-1號',
+    phone: '02-2596-3255',
+    image: 'https://images.pexels.com/photos/5718865/pexels-photo-5718865.jpeg?auto=compress&cs=tinysrgb&w=800',
+    latitude: 25.0627,
+    longitude: 121.5270,
+    description: '傳統台菜餐廳，提供道地的台灣料理與精緻的用餐環境。',
+    openHours: '11:30-14:30, 17:30-21:30',
+    features: ['台菜', '海鮮', '包廂', '宴席']
+  },
+  {
+    id: '4',
+    name: '度小月擔仔麵',
+    cuisine: '台南料理',
+    rating: 4.4,
+    priceRange: '$$',
+    address: '台北市中正區永康街9-1號',
+    phone: '02-2351-1325',
+    image: 'https://images.pexels.com/photos/4871284/pexels-photo-4871284.jpeg?auto=compress&cs=tinysrgb&w=800',
+    latitude: 25.0265,
+    longitude: 121.5285,
+    description: '台南老字號擔仔麵，傳承百年的古早味。',
+    openHours: '11:00-21:00',
+    features: ['擔仔麵', '滷味', '台南小吃', '古早味']
+  },
+  {
+    id: '5',
+    name: '饒河夜市胡椒餅',
+    cuisine: '夜市小吃',
+    rating: 4.7,
+    priceRange: '$',
+    address: '台北市松山區饒河街249號前',
+    image: 'https://images.pexels.com/photos/4871345/pexels-photo-4871345.jpeg?auto=compress&cs=tinysrgb&w=800',
+    latitude: 25.0515,
+    longitude: 121.5776,
+    description: '饒河夜市人氣胡椒餅攤，現烤熱騰騰的胡椒餅香氣四溢。',
+    openHours: '17:00-01:00',
+    features: ['胡椒餅', '夜市', '現烤', '排隊美食']
+  },
+  {
+    id: '6',
+    name: '永康牛肉麵',
+    cuisine: '牛肉麵',
+    rating: 4.3,
+    priceRange: '$$',
+    address: '台北市大安區永康街17號',
+    phone: '02-2351-1051',
+    image: 'https://images.pexels.com/photos/4871119/pexels-photo-4871119.jpeg?auto=compress&cs=tinysrgb&w=800',
+    latitude: 25.0265,
+    longitude: 121.5285,
+    description: '永康街知名牛肉麵店，湯頭濃郁，牛肉軟嫩。',
+    openHours: '11:00-21:00',
+    features: ['紅燒牛肉麵', '清燉牛肉麵', '小菜', '湯品']
+  }
+];
